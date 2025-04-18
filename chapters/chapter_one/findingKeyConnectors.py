@@ -1,5 +1,4 @@
 #Identificar os conectores chave dentre os cientistas de dados utilizando um dump de dad
-
 users = [
     { "id" : 0, "name" : "Hero"},
     { "id" : 1, "name" : "Dunn"},
@@ -57,3 +56,7 @@ id_and_friends[1],
     reverse = True)
 
 print("Pessoas com mais conexões:", num_friends_by_id)
+
+# Dessa forma computamos uma métrica de rede chamada de "centralidade de grau", que mede a importância de um nó em uma rede.
+# A centralidade de grau é uma medida simples, mas poderosa, que pode ser usada para identificar os nós mais importantes em uma rede.
+# A centralidade de grau é calculada contando o número de conexões que um nó tem. Quanto mais conexões um nó tem, maior sua centralidade de grau.
