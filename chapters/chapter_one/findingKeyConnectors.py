@@ -28,7 +28,6 @@ friendship_pairs = [
     (8,9)
 ]
 
-
 friendships = {user["id"]: [] for user in users}
 
 for i, j in friendship_pairs:
@@ -48,3 +47,13 @@ avg_connections = total_connections / num_users
 print(f"Total de conexões: {total_connections}")
 print(f"Total de usuários: {num_users}")
 print(f"Média de conexões: {avg_connections}")
+
+# Achando as pessoas com mais conexões
+num_friends_by_id = [(user["id"], number_of_friends(user)) for user in users]
+
+num_friends_by_id.sort(
+    key = lambda id_and_friends: 
+id_and_friends[1],
+    reverse = True)
+
+print("Pessoas com mais conexões:", num_friends_by_id)
