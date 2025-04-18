@@ -47,7 +47,7 @@ print(f"Total de conexões: {total_connections}")
 print(f"Total de usuários: {num_users}")
 print(f"Média de conexões: {avg_connections}")
 
-# Achando as pessoas com mais conexões
+# Achando as pessoas com mais conexões usando uma métrica de rede chamada de "centralidade de grau"
 num_friends_by_id = [(user["id"], number_of_friends(user)) for user in users]
 
 num_friends_by_id.sort(
@@ -57,6 +57,16 @@ id_and_friends[1],
 
 print("Pessoas com mais conexões:", num_friends_by_id)
 
-# Dessa forma computamos uma métrica de rede chamada de "centralidade de grau", que mede a importância de um nó em uma rede.
-# A centralidade de grau é uma medida simples, mas poderosa, que pode ser usada para identificar os nós mais importantes em uma rede.
-# A centralidade de grau é calculada contando o número de conexões que um nó tem. Quanto mais conexões um nó tem, maior sua centralidade de grau.
+# Encontrando os amigos de amigos
+def foaf_ids_bad(user):
+    """foaf é um acronimo para Friend of a Friend"""
+    return [foaf_id
+            for friend_id in 
+    friendships[user["id"]]
+            for foaf_id in 
+    friendships[friend_id]]
+
+print(friendships[0])
+print(friendships[1])
+print(friendships[2])
+
