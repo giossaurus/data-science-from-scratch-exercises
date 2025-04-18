@@ -83,6 +83,7 @@ def friends_of_friends(user):
 
 print(friends_of_friends(users[3]))
 
+# Identificando usuários com interesses em comum
 interest = [
     (0, "Hadoop"), (0, "Big Data"), (0, "HBase"), (0, "Java"),
     (0, "Spark"), (0, "Cassandra"), (1, "NoSQL"), (1, "MongoDB"),
