@@ -99,6 +99,7 @@ interest = [
     (9, "Java"), (9, "MapReduce"), (9, "Big Data")
 ]
 
+# Criando um dicionário de interesses, onde a chave é o id do usuário e o valor é uma lista de interesses. Dessa forma, podemos encontrar os interesses de cada usuário de forma mais eficiente.
 def data_scientists_who_like(target_interest):
     """Ache os ids de todos os usuários que gostam do interesse alvo"""
     return [user_id
@@ -107,3 +108,26 @@ def data_scientists_who_like(target_interest):
     ]
     
 print(data_scientists_who_like("Big Data"))
+
+from collections import defaultdict
+
+user_ids_by_interest = defaultdict(list)
+
+for user_id, user_interest in interest:
+        user_ids_by_interest[user_interest].append(user_id)
+
+interests_by_user_id = defaultdict(list)
+for user_id, interest in interest:
+    interests_by_user_id[user_id].append(interest)
+
+def most_common_interests_with(user):
+    return Counter(
+        interest_user_id
+        for interest in interests_by_user_id[user["id"]]
+        for interest_user_id in user_ids_by_interest[interest]
+        if interest_user_id != user["id"]
+    )
+print(most_common_interests_with(users[0]))
+print(most_common_interests_with(users[1]))
+print(most_common_interests_with(users[2]))
+print(most_common_interests_with(users[3]))
