@@ -131,3 +131,24 @@ print(most_common_interests_with(users[0]))
 print(most_common_interests_with(users[1]))
 print(most_common_interests_with(users[2]))
 print(most_common_interests_with(users[3]))
+
+#Plotando salário por anos de experiência
+import matplotlib.pyplot as plt
+
+salaries_and_tenures = [(83000, 8.7), (88000, 8.1),
+                        (48000, 0.7), (76000, 6),
+                        (69000, 6.5), (76000, 7.5),
+                        (60000, 2.5), (83000, 10),
+                        (48000, 1.9), (63000, 4.2)]
+
+salaries = [salary for salary, _ in salaries_and_tenures]
+tenures = [tenure for _, tenure in salaries_and_tenures]
+
+plt.figure(figsize=(10, 6))
+plt.scatter(tenures, salaries)
+plt.xlabel('Anos de Experiência')
+plt.ylabel('Salário (R$)')
+plt.title('Salário por Anos de Experiência')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
