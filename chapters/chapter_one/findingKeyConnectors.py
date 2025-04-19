@@ -132,7 +132,7 @@ print(most_common_interests_with(users[1]))
 print(most_common_interests_with(users[2]))
 print(most_common_interests_with(users[3]))
 
-#Plotando salário por anos de experiência
+#Plotando salário por anos de experiência com os dados fornecidos
 import matplotlib.pyplot as plt
 
 salaries_and_tenures = [(83000, 8.7), (88000, 8.1),
