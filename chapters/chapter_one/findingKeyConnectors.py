@@ -144,11 +144,11 @@ salaries_and_tenures = [(83000, 8.7), (88000, 8.1),
 salaries = [salary for salary, _ in salaries_and_tenures]
 tenures = [tenure for _, tenure in salaries_and_tenures]
 
-plt.figure(figsize=(10, 6))
-plt.scatter(tenures, salaries)
-plt.xlabel('Anos de Experiência')
-plt.ylabel('Salário (R$)')
-plt.title('Salário por Anos de Experiência')
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+# plt.figure(figsize=(10, 6))
+# plt.scatter(tenures, salaries)
+# plt.xlabel('Anos de Experiência')
+# plt.ylabel('Salário (R$)')
+# plt.title('Salário por Anos de Experiência')
+# plt.grid(True)
+# plt.tight_layout()
+# plt.show()
